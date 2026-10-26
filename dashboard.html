@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Intern Dashboard | TechBridge</title>
+  <meta name="description" content="The TechBridge Intern Dashboard: track your internship progress, work through all 8 tasks, explore the Challenge Hub and learn about modern web technologies.">
+  <meta name="theme-color" content="#0D004D">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Icon sprite (inline so there are no extra files to load) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.7-5A8.5 8.5 0 1 1 21 11.5Z"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+      <symbol id="i-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+      <symbol id="i-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></symbol>
+      <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+      <symbol id="i-reset" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></symbol>
+      <symbol id="i-award" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.2 13.9 7 22l5-3 5 3-1.2-8.1"/></symbol>
+      <symbol id="i-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+      <symbol id="i-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 10 5-10 5L2 7l10-5Z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+      <symbol id="i-linkedin" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.5h4V21H3V9.5Zm6.5 0h3.8v1.6h.1c.5-1 1.8-1.9 3.7-1.9 4 0 4.7 2.6 4.7 6V21h-4v-5c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V21h-4V9.5Z"/></symbol>
+      <symbol id="i-facebook" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-8h2.7l.4-3.2h-3.1V7.8c0-.9.3-1.5 1.6-1.5h1.7V3.4c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.1v2.4H7.6V13h2.8v8h3.1Z"/></symbol>
+      <symbol id="i-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></symbol>
+    </defs>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Cohort notice -->
+  <div class="notice" role="status">
+    <p><span class="notice-dot" aria-hidden="true"></span>The current cohort is in progress. Applications for the next cohort are not open yet.</p>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="TechBridge home">
+        <img src="images/techbridge-logo.png" alt="TechBridge" width="546" height="103">
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="tasks.html"><span class="label-long">Internship Tasks</span><span class="label-short">Tasks</span></a></li>
+          <li><a href="roadmap.html"><span class="label-long">Internship Roadmap</span><span class="label-short">Roadmap</span></a></li>
+          <li><a href="challenges.html"><span class="label-long">Challenge Hub</span><span class="label-short">Challenges</span></a></li>
+          <li><a href="dashboard.html" aria-current="page">Dashboard</a></li>
+        </ul>
+      </nav>
+      <div class="header-side">
+        <a class="btn btn-primary btn-sm" href="https://chat.whatsapp.com/FqpBvYS4oaK32cXDxc8JIS" target="_blank" rel="noopener noreferrer">
+          <svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg>
+          <span class="label-long">Join the Community</span>
+          <span class="label-short">Join</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- A. Welcome -->
+    <section class="hero page-hero dash-top" id="top">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li aria-current="page">Intern Dashboard</li>
+          </ul>
+        </nav>
+
+        <div class="welcome">
+          <span class="avatar" id="avatar" aria-hidden="true">A</span>
+          <div class="welcome-text">
+            <h1>Welcome back, <span id="intern-name">Alex</span></h1>
+            <p class="welcome-role"><span id="intern-track">Web Development</span> Intern</p>
+            <p class="welcome-msg">This is your TechBridge internship dashboard. Track your progress across all 8 tasks, see what to work on next, and explore the Challenge Hub when you want extra practice.</p>
+            <ul class="welcome-links">
+              <li><a href="#progress">Progress</a></li>
+              <li><a href="#tracker">Task tracker</a></li>
+              <li><a href="#challenge-hub">Challenge Hub</a></li>
+              <li><a href="#technologies">Web technologies</a></li>
+            </ul>
+          </div>
+          <div class="welcome-status">
+            <p class="welcome-status-label">Internship status</p>
+            <p class="status-big" id="intern-status" data-state="progress">In Progress</p>
+          </div>
+        </div>
+
+        <noscript>
+          <p class="noscript-note">The dashboard needs JavaScript to show and update your tasks. Please turn JavaScript on, or read every task on the <a href="tasks.html">Internship Tasks</a> page.</p>
+        </noscript>
+      </div>
+    </section>
+
+    <!-- Progress -->
+    <section class="section section-soft" id="progress">
+      <div class="container">
+        <div class="progress-card">
+          <div class="progress-top">
+            <div>
+              <h2>Internship Progress</h2>
+              <p class="progress-count"><strong id="done-count">0</strong> / <span id="total-count">8</span> Tasks Completed</p>
+            </div>
+            <p class="progress-percent" id="percent" aria-hidden="true">0%</p>
+          </div>
+
+          <div class="bar" id="bar" role="progressbar" aria-label="Overall internship progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-valuetext="0 percent complete">
+            <div class="bar-fill" id="bar-fill"></div>
+          </div>
+
+          <ol class="task-dots" id="task-dots" aria-label="Status of each task"></ol>
+
+          <div class="stat-tiles">
+            <div class="stat-tile"><p class="stat-tile-num" id="stat-total">8</p><p class="stat-tile-label">Total tasks</p></div>
+            <div class="stat-tile"><p class="stat-tile-num" id="stat-done">0</p><p class="stat-tile-label">Completed</p></div>
+            <div class="stat-tile"><p class="stat-tile-num" id="stat-left">8</p><p class="stat-tile-label">Remaining</p></div>
+          </div>
+
+          <div class="current-task" id="current-task"></div>
+
+          <div class="celebrate" id="celebrate" hidden>
+            <svg class="icon" aria-hidden="true"><use href="#i-award"/></svg>
+            <div>
+              <h3>All 8 tasks completed</h3>
+              <p>Great work. You have finished the TechBridge internship tasks. Keep practising in the Challenge Hub.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Task tracker -->
+    <section class="section" id="tracker">
+      <div class="container">
+        <div class="section-head">
+          <h2>Task Tracker</h2>
+          <p>All 8 internship tasks in one place. Open a task to read what is expected, and mark it as completed when you are done.</p>
+        </div>
+
+        <div class="tracker-bar">
+          <div class="seg" role="group" aria-label="Filter tasks by status">
+            <button type="button" class="seg-btn" data-filter="All" aria-pressed="true">All <span class="count"></span></button>
+            <button type="button" class="seg-btn" data-filter="Completed" aria-pressed="false">Completed <span class="count"></span></button>
+            <button type="button" class="seg-btn" data-filter="In Progress" aria-pressed="false">In Progress <span class="count"></span></button>
+            <button type="button" class="seg-btn" data-filter="Not Started" aria-pressed="false">Not Started <span class="count"></span></button>
+          </div>
+          <button type="button" class="reset-btn" id="reset-progress">
+            <svg class="icon" aria-hidden="true"><use href="#i-reset"/></svg>
+            Reset progress
+          </button>
+        </div>
+
+        <p class="result-count" id="task-count" role="status" aria-live="polite"></p>
+
+        <!-- Task cards are drawn by dashboard.js -->
+        <ul class="task-grid" id="task-list"></ul>
+
+        <div class="no-results" id="no-tasks" hidden>
+          <h3>No tasks in this category</h3>
+          <p>Choose another filter to see more tasks.</p>
+          <button type="button" class="btn btn-primary" id="show-all">Show all tasks</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Challenge Hub -->
+    <section class="section section-soft" id="challenge-hub">
+      <div class="container">
+        <div class="hub-card">
+          <span class="icon-chip icon-chip-lg"><svg class="icon" aria-hidden="true"><use href="#i-layers"/></svg></span>
+          <div class="hub-text">
+            <p class="hub-label">Challenge Hub</p>
+            <h2><span id="challenge-total">10</span> Challenges Available</h2>
+            <p>Practise with realistic Data Analytics and Web Development challenges from Task 5. Filter by track or difficulty and open any challenge to see what you would build.</p>
+            <ul class="hub-chips">
+              <li><span id="challenge-data">5</span> Data Analytics</li>
+              <li><span id="challenge-web">5</span> Web Development</li>
+              <li>Beginner to Advanced</li>
+            </ul>
+          </div>
+          <a class="btn btn-primary btn-lg" href="challenges.html">
+            Explore Challenges
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modern Web Technologies -->
+    <section class="section" id="technologies">
+      <div class="container">
+        <div class="section-head">
+          <h2>Modern Web Technologies</h2>
+          <p>A complete web platform is built from many parts. Pick a technology to see what it is and what developers use it for. You do not need to build a backend for this task; the goal is to know what is out there.</p>
+        </div>
+
+        <div class="tabs tech-tabs" role="tablist" aria-label="Web technologies">
+          <button class="tab" type="button" role="tab" id="tech-tab-nextjs" data-tech="nextjs" aria-selected="true" aria-controls="tech-panel">Next.js</button>
+          <button class="tab" type="button" role="tab" id="tech-tab-vue" data-tech="vue" aria-selected="false" aria-controls="tech-panel" tabindex="-1">Vue.js</button>
+          <button class="tab" type="button" role="tab" id="tech-tab-angular" data-tech="angular" aria-selected="false" aria-controls="tech-panel" tabindex="-1">Angular</button>
+          <button class="tab" type="button" role="tab" id="tech-tab-backend" data-tech="backend" aria-selected="false" aria-controls="tech-panel" tabindex="-1">Backend</button>
+        </div>
+
+        <!-- Drawn by dashboard.js -->
+        <div class="tech-panel" id="tech-panel" role="tabpanel" aria-labelledby="tech-tab-nextjs" tabindex="-1"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Task details (opened by dashboard.js) -->
+  <dialog class="dialog" id="task-dialog" aria-labelledby="task-dialog-title">
+    <div class="dialog-inner">
+      <button type="button" class="dialog-close" data-close aria-label="Close task details">
+        <svg class="icon" aria-hidden="true"><use href="#i-x"/></svg>
+      </button>
+      <div class="dialog-body" id="task-dialog-content"></div>
+      <div class="dialog-foot" id="task-dialog-actions"></div>
+    </div>
+  </dialog>
+
+  <!-- Small notification -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="images/techbridge-logo-light.png" alt="TechBridge" width="546" height="103">
+        <p class="footer-tagline">Bridging Learning to Real-World Experience</p>
+        <p class="footer-org">TechBridge by Baselink Services Limited</p>
+      </div>
+
+      <nav class="footer-col" aria-label="Footer">
+        <h2>Quick links</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="index.html#internship">Internship</a></li>
+          <li><a href="tasks.html">Internship Tasks</a></li>
+          <li><a href="roadmap.html">Internship Roadmap</a></li>
+          <li><a href="challenges.html">Challenge Hub</a></li>
+          <li><a href="dashboard.html">Intern Dashboard</a></li>
+          <li><a href="index.html#community">Community</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-col">
+        <h2>Contact</h2>
+        <ul>
+          <li><a href="mailto:techbridgebaselink@gmail.com">techbridgebaselink@gmail.com</a></li>
+          <li><a href="https://www.linkedin.com/company/techbridge-services/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a href="https://www.facebook.com/p/Baselink-Services-100066771475783/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+          <li><a href="https://www.instagram.com/techbridgeserves" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 TechBridge by Baselink Services Limited. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="dashboard.js" defer></script>
+</body>
+</html>

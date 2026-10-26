@@ -93,36 +93,38 @@ const webDevelopmentTasks = [
   {
     number: 5,
     day: 15,
-    title: "Build the Intern Registration Experience",
-    description: "Create a professional registration and onboarding interface for TechBridge interns.",
-    difficulty: "Intermediate",
+    title: "Build the TechBridge Challenge Hub",
+    description: "Create an interactive Challenge Hub where visitors can browse, filter and explore challenges from the two TechBridge tracks.",
+    difficulty: "Beginner \u2192 Intermediate",
     build: [
-      "A professional registration and onboarding interface",
-      "Designed for TechBridge interns"
+      "A Challenge Hub page where visitors can browse challenges from both tracks",
+      "Filters for track and difficulty",
+      "Challenge details that appear without a page refresh"
     ],
-    connects: null
+    connects: "The Home, Programs and roadmap pages from earlier tasks."
   },
   {
     number: 6,
     day: 19,
+    title: "Build the TechBridge Intern Dashboard",
+    description: "Create an interactive intern dashboard where an intern can see their progress, track their tasks and explore the Challenge Hub.",
+    difficulty: "Intermediate",
+    build: [
+      "A welcome section, plus a progress bar and percentage that update as tasks are completed",
+      "A task tracker with filters and task details",
+      "A link to the Challenge Hub and a Modern Web Technologies explorer"
+    ],
+    connects: "The Challenge Hub from Task 5."
+  },
+  {
+    number: 7,
+    day: 22,
     title: "Build the Task Submission System",
     description: "Create an interface through which interns can prepare and submit their task work.",
     difficulty: "Intermediate",
     build: [
       "An interface where interns can prepare their task work",
       "A way for interns to submit that work"
-    ],
-    connects: null
-  },
-  {
-    number: 7,
-    day: 22,
-    title: "Build the Intern Dashboard",
-    description: "Create a dashboard where an intern can view their profile, progress, tasks and submissions.",
-    difficulty: "Intermediate",
-    build: [
-      "A dashboard that shows an intern's profile",
-      "Views of their progress, tasks and submissions"
     ],
     connects: null
   },
